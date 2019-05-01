@@ -2,6 +2,7 @@
 #include <iostream>
 
 //created by Aidan Potteiger
+//now it's funkey
 
 int main() {
   

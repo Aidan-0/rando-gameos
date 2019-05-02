@@ -1,14 +1,19 @@
  
 #include <iostream>
+#include <cmath>
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 //created by Aidan Potteiger
 
 int main() {
   
   int guess;
-  /* int answer = random;
-     #Figure out how to do random stuff
-  */
+
+  srand( time(NULL) );
+  int answer = rand() % 21;
+
   std::cout << "This is hangman,\n";
   std::cout << "Guess the number between 1-20, you have 7 tries\n";
 
@@ -17,7 +22,7 @@ int main() {
     std::cout << "Guess number " << t << ":\n";
     std::cin >> guess;
     
-    if (guess == 14 && t == 1) {
+    if (guess == answer && t == 1) {
       
       std::cout << "Congradulations, you guessed the right number!\n";
       std::cout << "That only took " << t << " try!\n";
@@ -25,7 +30,7 @@ int main() {
       
     }
 
-    else if (guess == 14 && t != 1) {
+    else if (guess == answer && t != 1) {
 
       std::cout << "Congradulations, you guessed the right number!\n";
       std::cout << "That only took " << t << " tries!\n";
@@ -35,7 +40,7 @@ int main() {
 
     else if (t == 7) {
 
-      std::cout << "You failed, but you can always try again because this is only a cpp file :)\n";
+      std::cout << "You failed, the correct answer was " << answer << ", but you can always try again because this is only a cpp file :)\n";
       break;
 
     }

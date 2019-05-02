@@ -58,3 +58,6 @@ TestResults/
 ehthumbs.db
 Icon?
 Thumbs.db
+.vscode/ipch/b578b782fe4234be/hangmanGame.ipch
+.vscode/ipch/b578b782fe4234be/mmap_address.bin
+.vscode/c_cpp_properties.json

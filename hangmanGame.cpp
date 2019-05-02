@@ -6,16 +6,23 @@
 #include <time.h>
 
 //created by Aidan Potteiger
+int answer;
+
+void gen(){
+  srand( time(NULL) );
+  answer = rand() % 11;
+}
 
 int main() {
   
   int guess;
 
-  srand( time(NULL) );
-  int answer = rand() % 21;
-
+  if (answer == 0) {
+    gen();
+  }
+  
   std::cout << "This is hangman,\n";
-  std::cout << "Guess the number between 1-20, you have 7 tries\n";
+  std::cout << "Guess the number 1-10, you have 7 tries\n";
 
   for (int t = 1; t <= 7; t++) {
     

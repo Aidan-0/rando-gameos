@@ -4,13 +4,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <chrono>
+#include <thread>
 
 //created by Aidan Potteiger
+
+//change the numbers to a vector list of words to choose from
+
 int answer;
 
 void gen(){
+  std::cout << "Please wait while a number is generated";
   srand( time(NULL) );
-  answer = rand() % 11;
+  answer = rand() % 16;
 }
 
 int main() {
@@ -22,7 +28,7 @@ int main() {
   }
   
   std::cout << "This is hangman,\n";
-  std::cout << "Guess the number 1-10, you have 7 tries\n";
+  std::cout << "Guess the number 1-15, you have 7 tries\n";
 
   for (int t = 1; t <= 7; t++) {
     

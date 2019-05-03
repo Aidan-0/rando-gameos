@@ -5,7 +5,9 @@
 #include <stdlib.h>
 #include <time.h>
 
-//created by Aidan Potteiger
+//Created and maintain by Aidan potteiger
+//wait, how do you matain something like this?
+
 int answer;
 
 void gen(){

@@ -7,9 +7,8 @@
 #include <chrono>
 #include <thread>
 
-//created by Aidan Potteiger
-
-//change the numbers to a vector list of words to choose from
+//Created and maintain by Aidan potteiger
+//wait, how do you matain something like this?
 
 int answer;
 

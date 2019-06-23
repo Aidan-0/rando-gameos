@@ -11,6 +11,7 @@
 *.suo
 *.out
 *.bin
+*.ipch
 # Include dlls if they’re in the NuGet packages directory
 !/packages/*/lib/*.dll
 # Include dlls if they're in the CommonReferences directory
@@ -62,3 +63,4 @@ Thumbs.db
 .vscode/ipch/b578b782fe4234be/hangmanGame.ipch
 .vscode/ipch/b578b782fe4234be/mmap_address.bin
 .vscode/c_cpp_properties.json
+

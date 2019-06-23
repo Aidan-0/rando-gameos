@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-void choice(){
+void choice() {
 
      std::cout << "   |   |   \n";
      std::cout << " 1 | 2 | 3 \n";
@@ -19,7 +19,7 @@ void choice(){
 
     }
     
-void number_gen(){
+void number_gen() {
 
     srand ( time(NULL));
     int botN = rand() % 10;

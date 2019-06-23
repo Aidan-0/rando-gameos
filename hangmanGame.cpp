@@ -37,7 +37,7 @@ int main() {
     if (guess == answer && t == 1) {
       
       std::cout << "Congradulations, you guessed the right number!\n";
-      std::cout << "That only took " << t << " try!\n";
+      std::cout << "That only took 1 try!\n";
       break;
       
     }

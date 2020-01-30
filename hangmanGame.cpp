@@ -1,4 +1,4 @@
- 
+
 #include <iostream>
 #include <cmath>
 #include <stdio.h>
@@ -7,102 +7,91 @@
 #include <chrono>
 #include <thread>
 
-//Created and maintain by Aidan potteiger
-//wait, how do you matain something like this?
+// Created and maintained by Aidan Potteiger
+
+using namespace std;
 
 int answer;
+int guess;
 
-void gen(){
-  std::cout << "Please wait while a number is generated";
-  srand( time(NULL) );
-  answer = rand() % 16;
-}
+// Change this to change the max number
+int randMax = 15;
+// Change this number to change the maximum tries
+int tryMax = 7;
 
 int main() {
-  
-  int guess;
 
-  if (answer == 0) {
-    gen();
+  while (answer == 0) {
+    cout << "Please wait while a number is generated";
+    srand(time(NULL));
+    // Change "% 16"
+    answer = rand() % (randMax + 1);
   }
-  
-  std::cout << "This is hangman,\n";
-  std::cout << "Guess the number 1-15, you have 7 tries\n";
 
-  for (int t = 1; t <= 7; t++) {
-    
-    std::cout << "Guess number " << t << ":\n";
-    std::cin >> guess;
-    
-    if (guess == answer && t == 1) {
-      
-      std::cout << "Congradulations, you guessed the right number!\n";
-      std::cout << "That only took 1 try!\n";
+  cout << "This is hangman,\n";
+  cout << "Guess the number 1-" << randMax << ", you have 7 tries\n";
+
+  for (int tries = 1; tries <= 7; tries++) {
+    cout << "Guess number " << tries << ":\n";
+    cin >> guess;
+
+    if (guess == answer && tries == 1) {
+      cout << "Congratulations, you guessed the right number!\n";
+      cout << "That only took 1 try!\n";
       break;
-      
     }
 
-    else if (guess == answer && t != 1) {
-
-      std::cout << "Congradulations, you guessed the right number!\n";
-      std::cout << "That only took " << t << " tries!\n";
+    else if (guess == answer && tries != 1) {
+      cout << "Congratulations, you guessed the right number!\n";
+      cout << "That only took " << tries << " tries!\n";
       break;
-
     }
 
-    else if (t == 7) {
-
-      std::cout << "You failed, the correct answer was " << answer << ", but you can always try again because this is only a cpp file :)\n";
+    else if (tries == 7) {
+      cout << "You failed, the correct answer was " << answer << ", but you can always try again because this is only a cpp file :)\n";
       break;
-
     }
     else {
-      
-      std::cout << "That's not it, try again!\n";
-      switch(t) {
-      case 1 :
-        std::cout << "   O   \n";
-        break;
-      case 2 :
-        std::cout << "   O   \n";
-        std::cout << "   |   \n";
-        std::cout << "   |   \n";
-        break;
-      case 3 :
-        std::cout << "   O   \n";
-        std::cout << "  /|    \n";
-        std::cout << " / |    \n";
-        break;
-      case 4 :
-        std::cout << "   O   \n";
-        std::cout << "  /|\\   \n";
-        std::cout << " / | \\  \n";
-        break;
-      case 5 :
-        std::cout << "   O    \n";
-        std::cout << "  /|\\   \n";
-        std::cout << " / | \\  \n";
-        std::cout << "  /     \n";
-        std::cout << " /       \n";
-        break;
-      case 6 :
-        std::cout << "   O    \n";
-        std::cout << "  /|\\   \n";
-        std::cout << " / | \\  \n";
-        std::cout << "  / \\   \n";
-        std::cout << " /   \\   \n";
-        break;
+      cout << "That's not it, try again!\n";
+      switch (tries) {
+        case 1:
+          cout << "   O   \n";
+          break;
+
+        case 2:
+          cout << "   O   \n";
+          cout << "   |   \n";
+          cout << "   |   \n";
+          break;
+
+        case 3:
+          cout << "   O   \n";
+          cout << "  /|    \n";
+          cout << " / |    \n";
+          break;
+
+        case 4:
+          cout << "   O   \n";
+          cout << "  /|\\   \n";
+          cout << " / | \\  \n";
+          break;
+
+        case 5:
+          cout << "   O    \n";
+          cout << "  /|\\   \n";
+          cout << " / | \\  \n";
+          cout << "  /     \n";
+          cout << " /       \n";
+          break;
+
+        case 6:
+          cout << "   O    \n";
+          cout << "  /|\\   \n";
+          cout << " / | \\  \n";
+          cout << "  / \\   \n";
+          cout << " /   \\   \n";
+          break;
       }
     }
   }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
 }
